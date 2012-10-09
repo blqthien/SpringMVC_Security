@@ -1,6 +1,6 @@
 # Spring Security
 
-This is a simple example on how to create a simple Spring MVC application secured by Spring Security. The example is based on the SpringMVC template provided by the Spring Tool Suite (STS). The basic MVC setup are not descibed.
+This is a simple example on how to create a simple Spring MVC application secured by Spring Security. The example is based on the SpringMVC template provided by the Spring Tool Suite (STS). The basic MVC setup are not described.
 
 ## Configuration
 
@@ -76,3 +76,9 @@ Create `security-context.xml`
 		</security:authentication-provider>
 	</security:authentication-manager>
 	</beans>
+
+## Integration Test
+
+Currently only simple url based security is implemented. To verify the setup a few simple Selenium WebDriver tests have been configured in `VerifySecuritySetup.java`
+
+The tests require the application to be running. Currently this is hardcoded to `http://localhost:8080/SpringMVCWithSecurity`. Because of this the test is also exclude from the Maven test phase (by naming convention).
