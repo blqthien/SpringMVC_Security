@@ -1,0 +1,22 @@
+version: 1
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: cn=User,ou=people, dc=springframework,dc=org
+objectclass: groupOfUniqueNames
+objectclass: top
+cn: User
+uniqueMember: uid=stein,ou=people,dc=springframework,dc=org
+
+dn: uid=stein,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Stein Kvarud
+sn: Kvarud
+uid: stein
+userPassword: Test123
